@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For You 💗</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    background:white;
+    text-align:center;
+    overflow-x:hidden;
+}
+
+.page{display:none;min-height:100vh;padding:70px 20px;}
+.page.active{display:block;}
+
+h1{font-size:32px;}
+h2{font-size:18px;font-weight:normal;}
+.pink{color:#ff5fa2;}
+
+button{
+    background:#ff8fbf;
+    border:none;
+    color:white;
+    font-size:16px;
+    padding:12px 30px;
+    margin:8px;
+    border-radius:25px;
+    cursor:pointer;
+}
+button:hover{background:#ff6fae;}
+
+img.main{
+    width:260px;
+    max-width:85%;
+    margin:20px 0;
+    animation:bounce 2s infinite;
+}
+
+@keyframes bounce{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-10px);}
+}
+
+/* gifts */
+.gifts{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+.gifts img{
+    width:170px;
+    cursor:pointer;
+    transition:transform .2s;
+}
+.gifts img:hover{transform:scale(1.05);}
+
+/* box */
+.box{
+    max-width:600px;
+    margin:auto;
+    background:#fff0f6;
+    padding:25px;
+    border-radius:15px;
+}
+
+/* slideshow */
+.slide{
+    max-width:600px;
+    margin:auto;
+}
+.slide img{
+    width:300px;
+    border-radius:15px;
+}
+
+/* envelope */
+.envelope{
+    width:90px;
+    margin-top:20px;
+    cursor:pointer;
+    transition:transform .2s;
+}
+.envelope:hover{transform:scale(1.1);}
+
+/* rose petals */
+.petal{
+    position:fixed;
+    top:-50px;
+    font-size:24px;
+    animation:fall linear infinite;
+    pointer-events:none;
+    z-index:999;
+}
+@keyframes fall{
+    to{
+        transform:translateY(110vh) rotate(360deg);
+        opacity:0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- AUDIO -->
+<audio id="bgMusic" loop>
+    <source src="lover-girl.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="roseMusic" loop>
+    <source src="lover-girl-instrumental.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="clickSound">
+    <source src="click.mp3" type="audio/mpeg">
+</audio>
+
+<!-- PAGE 1 -->
+<div class="page active" id="p1">
+<h1>HIII BABYY! I made something for you</h1>
+<h2>Do you wanna see??</h2>
+<img class="main" src="https://media.giphy.com/media/MDJ9IbxxvDUQM/giphy.gif">
+<br>
+<button onclick="playClick(); go('p4')">YES</button>
+<button onclick="playClick(); go('p2')">NO</button>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page" id="p2">
+<h1 class="pink">HOW DARE YOU!</h1>
+<img class="main" src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif">
+<br>
+<button onclick="playClick(); go('p1')">TRY AGAIN</button>
+</div>
+
+<!-- PAGE 4 -->
+<div class="page" id="p4">
+<h1 class="pink">That's a good girl😏😏</h1>
+<img class="main" src="https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif">
+<br>
+<button onclick="playClick(); go('p5')">NEXT</button>
+</div>
+
+<!-- PAGE 5 -->
+<div class="page" id="p5">
+<h1 class="pink">will you be my valentine</h1>
+<img class="main" src="please.gif">
+<br>
+<button onclick="playClick(); go('gifts')">YES</button>
+<button onclick="playClick(); go('p3')">NO</button>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page" id="p3">
+<h1 class="pink">Did you say no?</h1>
+<img class="main" src="https://media.giphy.com/media/OPU6wzx8JrHna/giphy.gif">
+<br>
+<button onclick="playClick(); go('p5')">TRY AGAIN</button>
+</div>
+
+<!-- GIFTS -->
+<div class="page" id="gifts">
+<h1 class="pink">GIFT FOR YOU</h1>
+<p>Click any gift 💝</p>
+<div class="gifts">
+<img src="envelope.jpg" onclick="playClick(); go('letter')">
+<img src="envelope.jpg" onclick="playClick(); go('slides')">
+<img src="envelope.jpg" onclick="playClick(); go('coupons')">
+<img src="envelope.jpg" onclick="playClick(); openRoses()">
+</div>
+<br>
+<button onclick="playClick(); restart()">Restart 💞</button>
+</div>
+
+<!-- LETTER (UNCHANGED) -->
+<div class="page" id="letter">
+<h1 class="pink">A Letter for You Babes💌</h1>
+<div class="box">
+<p>
+Dear Saranya,<br><br>
+I can't believe it's been 6 months already. I guess time really does fly when you're with the right person 😁. I feel soooo lucky to have you in my life and I hope i continue to forever because there's no one else I'd rather talk to or be with at any time. The 1 hour I meet you is the best part of my day by far and I loveee bus rides with you listening to music holding your thigh 😛😛 (it's SOOOOO HARD not to maths class ughhhhh) and hopefully I take bus next year so we can go tg in the morning atleast. 
+I just wanna spend the rest of my looking at your smile you're sooo cutuuuuu AHHHH 🥰🥰🥰
+You said no gifts so this is the least i could do 
+Sorry I had to combine this and valentine's ka thing in one, maths is lowkey cooking me ☹️☹️
+Anw I don't wanna yap too much 
+Main point is - you're sooo cute and I love youuuu soooo muchhhh
+<br><br>
+Forever yours, Avyukt 
+</p>
+</div>
+<img class="envelope" src="back.png" onclick="playClick(); closeGift()">
+</div>
+
+<!-- SLIDES -->
+<div class="page" id="slides">
+<h1 class="pink">Our Memories 📸</h1>
+<div class="slide">
+<img id="slideImg" src="slide1.jpeg">
+<p id="slideText"></p>
+</div>
+
+<br>
+<button onclick="playClick(); prev()">◀</button>
+<button onclick="playClick(); next()">▶</button>
+
+<br>
+<img class="envelope" src="back.png" onclick="playClick(); closeGift()">
+</div>
+
+<!-- COUPON SLIDES -->
+<div class="page" id="coupons">
+<h1 class="pink">Coupons 🎟️</h1>
+<div class="box">
+<h2 id="couponText"></h2>
+</div>
+
+<br>
+<button onclick="playClick(); prevCoupon()">◀</button>
+<button onclick="playClick(); nextCoupon()">▶</button>
+
+<br>
+<img class="envelope" src="back.png" onclick="playClick(); closeGift()">
+</div>
+
+<!-- ROSES -->
+<div class="page" id="roses">
+<h1 class="pink">For You 🌹</h1>
+<img class="main" src="rosebouquet.png">
+<p style="max-width:600px;margin:auto;">
+I got you roses, which you can actually take home and keep with you forever.
+</p>
+<img class="envelope" src="back.png" onclick="playClick(); closeRoses()">
+</div>
+
+<script>
+const bgMusic=document.getElementById("bgMusic");
+const clickSound=document.getElementById("clickSound");
+
+document.addEventListener("click",()=>{
+ if(bgMusic.paused){bgMusic.volume=0.3;bgMusic.play();}
+},{once:true});
+
+function playClick(){
+ clickSound.currentTime=0;
+ clickSound.volume=0.6;
+ clickSound.play();
+}
+
+function go(id){
+ stopPetals();
+ document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+ document.getElementById(id).classList.add('active');
+}
+
+/* MEMORY SLIDES */
+const slides=[
+ {img:"slide1.jpeg", text:"Girlfriend's Day 💗"},
+ {img:"slide2.jpeg", text:"My bday(Got the best gift everrrrrr🥰🥰)"},
+ {img:"slide3.jpeg", text:"Diwali (that saree got me so 😩🤤)"}
+];
+let i=0;
+function show(){slideImg.src=slides[i].img;slideText.innerText=slides[i].text;}
+function next(){i=(i+1)%slides.length;show();}
+function prev(){i=(i-1+slides.length)%slides.length;show();}
+show();
+
+/* COUPON SLIDES */
+const coupons=[
+ "🍕 Food Date (Big backs)",
+ "🤗 Unlimited hugs",
+ "🥵 Making out while having monster till neither of us can breathe",
+ "😎 Lifetime supply of compliments"
+];
+let c=0;
+function showCoupon(){couponText.innerText=coupons[c];}
+function nextCoupon(){c=(c+1)%coupons.length;showCoupon();}
+function prevCoupon(){c=(c-1+coupons.length)%coupons.length;showCoupon();}
+showCoupon();
+
+/* ROSES */
+let petals=[];
+function openRoses(){go('roses');startPetals();}
+function closeRoses(){stopPetals();go('gifts');}
+function startPetals(){
+ stopPetals();
+ for(let j=0;j<67;j++){
+  let p=document.createElement("div");
+  p.className="petal";
+  p.innerHTML="🌹";
+  p.style.left=Math.random()*100+"vw";
+  p.style.animationDuration=10+Math.random()*8+"s";
+  document.body.appendChild(p);
+  petals.push(p);
+ }
+}
+function stopPetals(){petals.forEach(p=>p.remove());petals=[];}
+
+function closeGift(){go('gifts');}
+function restart(){stopPetals();go('p1');}
+</script>
+
+</body>
+</html>
